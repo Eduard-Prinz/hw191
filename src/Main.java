@@ -1,9 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        String login = "Edward_Prince_1112";
-        String password = "112233_123_Sky";
-        String confirmPassword = "112233_123_Sky";
+        String login = "java_skypro_go";
+        String password = "D_1hWiKjjP_9";
+        String confirmPassword = "D_1hWiKjjP_9";
 
-        Validator.validate(login, password, confirmPassword);
+        try {
+            Validator.validate(login, password, confirmPassword);
+            System.out.println("Регистрация прошла успешно!");
+        } catch (ValidationException e) {
+            System.out.println("Ошибка при регистрации: " + e.getMessage());
+        }
     }
 }
